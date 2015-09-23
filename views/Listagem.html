@@ -1,0 +1,49 @@
+<html>
+</head>
+<body background="imagens/wallpaper.jpg">
+	<div align="center"> 
+
+<h1>
+		<span style="font-size:50pt; color:#870F0F; font-family: 'Brush script MT'">
+Lista de avaliacoes</h1>
+
+
+<table>
+<thead>
+<tr>		
+
+				<th>
+					<span style="font-size:25pt; color:#870F0F; font-family: 'Brush script MT'">
+						Numero
+				</th>
+				
+				<th>
+					<span style="font-size:25pt; color:#870F0F; font-family: 'Brush script MT'">
+						Nome
+				</th>
+				<th>
+					<span style="font-size:25pt; color:#870F0F; font-family: 'Brush script MT'">
+						Nota
+				</th>
+
+
+</tr>
+</thead>
+<tbody>
+{{#avaliacoes}}
+<tr>
+<th>{{numero}}</th>
+<th>{{nome}}</th>
+<th>{{nota}}</th>
+</tr>
+{{/avaliacoes}}
+</tbody>
+</table>
+	<p>
+	<a href="/novodeleta" >
+	 <button type="submit" style="width: 180px; height: 49px; ">DELETAR AVALIACAO</button>
+	</a>
+	</p>
+</div>
+</body>
+</html>
