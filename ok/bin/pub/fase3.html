@@ -1,0 +1,61 @@
+<html>
+	<head>
+	<title> Fase 3 </title>
+	
+	
+	<body background="imagens/wallpaper.jpg">
+	
+		<a href="/home" >
+	Home
+	</a> <div align="center"> 
+	<div align="center"> 
+<img src="imagens/mona.jpg" width="300" height="400"> 	
+<script>
+
+function resp() {
+	var e = document.getElementById("s");
+	var resp = document.getElementById("p").value;
+	var strUser = e.options[e.selectedIndex].value;
+	if(strUser == "Autor"){
+    		if(resp.toLowerCase().trim() == "leonardo da vinci"){
+			window.location="fim.html";
+	}else{
+	alert("Você errou o nome do artista!");
+	}
+	}
+	if(strUser == "Obra"){
+    		if(resp.toLowerCase().trim() == "monalisa"){
+			window.location="fim.html";
+
+	}else{
+	alert("Você errou o nome da obra!");
+	}
+	}
+	if(strUser == "Ano"){
+		if(resp == "1517"){
+			window.location="fim.html";
+
+	}else{
+	alert("Você errou o ano da obra!");
+	}
+	}
+	}	
+	
+</script>
+</head>
+<form name="form1" action="" method="get">
+	<input type="text" id="p">
+    <select id="s">
+  	<option value="Autor">Autor</option>
+ 	<option value="Obra">Nome da Obra</option>
+  	<option value="Ano">Ano</option>
+	</select>
+	<input type="button" value="Enviar" onclick="resp()">		
+
+				</div>
+			
+</form>
+</body>
+</html>
+
+
