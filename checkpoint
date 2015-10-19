@@ -4,7 +4,7 @@ O que foi desenvolvido:
   - Criação de comentários sobre o jogo; 
   - Persistência de comentários - com números de identificação gerados automaticamente;
   - Opção de excluir comentarios ofensivos;
-  - Parte estética das fases (HTML);
+  - Parte estatica das fases (HTML);
 
 
 O que falta desenvolver:
