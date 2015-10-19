@@ -1,0 +1,14 @@
+CHECKPOINT
+
+O que foi desenvolvido:
+  - Criação de comentários sobre o jogo; 
+  - Persistência de comentários - com números de identificação gerados automaticamente;
+  - Opção de excluir comentarios ofensivos;
+  - Parte estética das fases (HTML);
+
+
+O que falta desenvolver:
+  - Menu de escolha para a resposta (nome da obra, ano, nome do artista); 
+  - Transição entre fases de acordo com a resposta recebida(caso seja a resposta certa o jogo ira passa para a próxima fase);
+  - Dicas para cada fase;
+  - Após 3 tentativas erradas o jogo encerra;
