@@ -1,0 +1,130 @@
+<html>
+<script src="/css/jquery-1.9.1.min.js"></script>
+	<head>
+	<title> Fase 9 </title>
+		<link rel="stylesheet" src="css/alinhar.css">
+	
+	<body background="imagens/wallpaper.jpg">
+	
+		<a href="/home" >
+	Home
+	</a> <div align="center"> 
+	<div align="center"> 
+			<div style="font-size:40pt; color:#870F0F; font-family: 'Brush script MT'" id="sessao"></div>
+			<img src="imagens/moldura6.jpg" width="380" height="298"> 	
+			
+
+<script type="text/javascript">
+
+var tempo = new Number();
+// Tempo em segundos
+
+tempo = 60;
+
+function startCountdown(){
+    // Se o tempo não for zerado
+    if((tempo - 1) >= 0){
+
+        // Pega a parte inteira dos minutos
+        var min = parseInt(tempo/60);
+        // Calcula os segundos restantes
+        var seg = tempo%60;
+        // Formata o número menor que dez, ex: 08, 07, ...
+        if(min < 10){
+            min = "0"+min;
+            min = min.substr(0, 2);
+        }
+
+        if(seg <=9)    seg = "0"+seg;        
+
+        // Cria a variável para formatar no estilo hora/cronômetro
+        horaImprimivel = '00:' + min + ':' + seg;
+        //JQuery pra setar o valor
+        $("#sessao").html(horaImprimivel);
+
+        // Define que a função será executada novamente em 1000ms = 1 segundo
+        setTimeout('startCountdown()',1000);
+
+        // diminui o tempo
+        tempo--;
+
+    // Quando o contador chegar a zero faz esta ação
+    } else {
+    	window.location="fim2.html";
+      // window.open('../controllers/logout.php', '_self');
+
+    }
+
+}
+
+// Chama a função ao carregar a tela
+startCountdown();
+</script>
+
+<script>
+
+
+
+	function resp() {
+	var e = document.getElementById("s");
+	var resp = document.getElementById("p").value;
+	var strUser = e.options[e.selectedIndex].value;
+	if(strUser == "Autor"){
+    		if(resp.toLowerCase().trim() == "paul cezanne"){
+			window.location="fase10.html";
+	}else{
+	alert("Voce errou o nome do artista!");
+	}
+	}
+	if(strUser == "Obra"){
+    		if((resp.toLowerCase().trim() == "o jogador de cartas") || (resp.toLowerCase().trim() == "jogador de cartas")){
+			window.location="fase10.html";
+
+	}else{
+	alert("Voce errou o nome da obra!");
+	}
+	}
+	if(strUser == "Ano"){
+		if(resp == "1892"){
+			window.location="fase10.html";
+
+	}else{
+	alert("Voce errou o ano da obra!");
+	}
+	}
+	}	
+	</script>
+
+</head>
+<form name="form1" action="" method="get" onsubmit="return false;">
+	<input type="text" id="p" style="width: 344px; ">
+    <select id="s">
+  	<option value="Autor">Autor</option>
+ 	<option value="Obra">Nome da Obra</option>
+  	<option value="Ano">Ano</option>
+	</select>
+	<input type="button" value="Enviar" onclick="resp()">
+	</div>
+	<embed src="musicas/suspense1.mp3" autostart="true" loop="true"width="2" height="0"></embed>
+									<a href="#" rel="modal" onclick="$('#janela1').fadeIn('slow');">DICAS</a>
+ 
+<div class="window" id="janela1" style="display: none">
+    <a href="#" class="fechar">X Fechar</a>
+	<img style= "width: 362px; height: 417px" src="imagens/dica9.jpg">
+
+</div>
+ 
+<div id="mascara"></div>
+	<script>
+	$(document).ready(function(){
+    $('.fechar').click(function(ev){
+        ev.preventDefault();
+        $(".window").hide();
+    });
+});	
+</script>
+
+</form>
+</body>
+</html>
+

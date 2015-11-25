@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>AI</title>
+</head>
+<script src="/css/jquery-1.9.1.min.js"></script>  <!--chamar o jquery -->
+
+	<body background="imagens/wallpaper.jpg">
+	<div align="center"> 
+
+	<!-- fonte/tamanho da frase-->	
+	<span style="font-size:100pt; color:#870F0F; font-family: 'Brush script MT'">
+			<strong>Arte Interativa</strong>
+	</span>
+	
+	<!-- botao que redireciona para a fase1-->	
+	<p>
+	<a href="fase1.html" >
+	<button type="submit" style="width: 172px; height: 49px; ">COMECAR</button>
+	</a>
+	</p>
+		<!-- cria o botao das dicas -->
+	<a href="#" rel="modal" onclick="$('#janela1').fadeIn('slow');">REGRAS</a>
+	
+<!-- janelas das dicas -->
+<div class="window" id="janela1" style="display: none">
+	<!-- cria o botao para fechar -->
+    <a href="#" class="fechar">X Fechar</a>
+		<img style= "width: 491px; height: 567px" src="imagens/regras.jpg">
+</div>
+	
+	 	<!-- SCRIPT para fechar a janela-->
+	<script>
+	$(document).ready(function(){
+    $('.fechar').click(function(ev){
+        ev.preventDefault();
+        $(".window").hide();
+    });
+	});
+		</script>
+	
+</div>
+</body>
+</html>

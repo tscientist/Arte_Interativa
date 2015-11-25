@@ -1,0 +1,60 @@
+<html>
+</head>
+<body background="imagens/wallpaper.jpg">
+	<div align="center"> 
+	<!-- fonte/tamanho da frase-->
+	<h1>
+		<span style="font-size:50pt; color:#870F0F; font-family: 'Brush script MT'">
+		Lista de avaliacoes
+		</span>
+	</h1>
+	
+<!-- cria a lista em filas-->	
+<table>
+<thead>
+<tr>		
+				<th>
+					<span style="font-size:25pt; color:#870F0F; font-family: 'Brush script MT'">
+						Numero
+					</span>
+				</th>
+				
+				<th>
+					<span style="font-size:25pt; color:#870F0F; font-family: 'Brush script MT'">
+						Nome
+					</span>
+				</th>
+				<th>
+					<span style="font-size:25pt; color:#870F0F; font-family: 'Brush script MT'">
+						Nota
+					</span>
+				</th>
+				
+<!-- array com as avaliacoes(cada aviacao contem numero, nome e nota)-->
+</tr>
+</thead>
+<tbody>
+{{#avaliacoes}}
+<tr>
+<th>{{numero}}</th>
+<th>{{nome}}</th>
+<th>{{nota}}</th>
+</tr>
+{{/avaliacoes}}
+</tbody>
+</table>
+
+	<!-- botao delete que leva para a rota "/novodeleta"-->
+	<p>
+	<a href="/novodeleta" >
+	 <button type="submit" style="width: 180px; height: 49px; ">DELETAR AVALIACAO</button>
+	</a>
+	</p>
+	<p>
+	<a href="/home" >
+	<button type="submit" style="width: 172px; height: 49px; ">JOGAR NOVAMENTE</button>
+	</a>
+	</p>
+</div>
+</body>
+</html>
